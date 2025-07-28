@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
+using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Http.Headers;
 
@@ -7,13 +8,17 @@ namespace RinhaDeBackendInMemory.API
     public class PaymentService
     {
         public HttpClient Client { get; }
+        private static readonly HttpClientHandler Handler = new HttpClientHandler();
         private readonly IConfiguration Config;
-        public List<Payment> Payments { get; set; } = new List<Payment>();
-        public List<Payment> Unprocessed { get; set; } = new List<Payment>();
+        private readonly ConcurrentBag<Payment> Payments = new();
+        private readonly ConcurrentDictionary<Guid, Payment> Unprocessed = new();
 
         public PaymentService(IConfiguration configuration)
         {
-            Client = new HttpClient();
+            Client = new HttpClient(Handler)
+            {
+                Timeout = TimeSpan.FromMilliseconds(500) 
+            };
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             Config = configuration;
         }
@@ -31,7 +36,7 @@ namespace RinhaDeBackendInMemory.API
 
             if (isRetry)
             {
-                Unprocessed.Remove(payment);
+                Unprocessed.TryRemove(payment.correlationId, out _);
             }
 
             if (response.IsSuccessStatusCode)
@@ -55,7 +60,7 @@ namespace RinhaDeBackendInMemory.API
             }
             else
             {
-                Unprocessed.Add(payment);
+                Unprocessed[payment.correlationId] = payment;
             }
         }
 
@@ -100,12 +105,19 @@ namespace RinhaDeBackendInMemory.API
         {
             while (!cancellationToken.IsCancellationRequested)
             {
-                var paymentsToRetry = Unprocessed.ToList();
+                var tasks = new List<Task>();
 
-                foreach (var payment in paymentsToRetry)
+                foreach (var up in Unprocessed.ToArray()) 
                 {
-                    await ProcessPayment(payment, true);
+                    var payment = up.Value;
+
+                    tasks.Add(Task.Run(async () =>
+                    {
+                        await ProcessPayment(payment, true);
+                    }));
                 }
+
+                await Task.WhenAll(tasks);
 
                 await Task.Delay(TimeSpan.FromMilliseconds(500), cancellationToken);
             }
