@@ -61,8 +61,8 @@ namespace RinhaDeBackendInMemory.API
 
         public PaymentSummary PaymentSummary(DateTime? from, DateTime? to)
         {
-            from = from ?? DateTime.MinValue;
-            to = to ?? DateTime.MaxValue;
+            from ??= DateTime.MinValue;
+            to ??= DateTime.MaxValue;
 
             var payments = Payments.Where(x => x.requestedAt >= from && x.requestedAt <= to).ToList();
 
