@@ -1,0 +1,188 @@
+2025-07-28 01:17:27.541 -03:00 [INF] Now listening on: http://localhost:5292
+2025-07-28 01:17:27.577 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-28 01:17:27.713 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-28 01:17:27.714 -03:00 [INF] Hosting environment: Development
+2025-07-28 01:17:27.714 -03:00 [INF] Content root path: C:\Users\Oscar\source\repos\RinhaDeBackendInMemory\RinhaDeBackendInMemory.API
+2025-07-28 01:17:28.208 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/index.html - null null
+2025-07-28 01:17:28.430 -03:00 [INF] HTTP GET /swagger/index.html => 200 in 71ms
+2025-07-28 01:17:28.434 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/index.html - 200 null text/html;charset=utf-8 236.7993ms
+2025-07-28 01:17:28.558 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-28 01:17:28.558 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_vs/browserLink - null null
+2025-07-28 01:17:28.560 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - 200 16537 application/javascript; charset=utf-8 2.188ms
+2025-07-28 01:17:28.593 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.6366ms
+2025-07-28 01:17:28.628 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - null null
+2025-07-28 01:17:28.644 -03:00 [INF] HTTP GET /swagger/v1/swagger.json => 200 in 14ms
+2025-07-28 01:17:28.645 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.3073ms
+2025-07-28 01:17:31.686 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:31.698 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-07-28 01:17:31.707 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:31.708 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:31.708 -03:00 [INF] HTTP GET /alive => 200 in 21ms
+2025-07-28 01:17:31.708 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 21.8999ms
+2025-07-28 01:17:32.438 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:32.439 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:32.439 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:32.439 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:17:32.439 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.6117ms
+2025-07-28 01:17:32.966 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:32.966 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:32.967 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:32.967 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:17:32.967 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.7192ms
+2025-07-28 01:17:33.437 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:33.437 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:33.437 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:33.437 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:17:33.438 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.8496ms
+2025-07-28 01:17:34.782 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:17:34.783 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:34.788 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:34.788 -03:00 [INF] HTTP GET /payments-summary => 200 in 5ms
+2025-07-28 01:17:34.788 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 6.0418ms
+2025-07-28 01:17:35.545 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:17:35.545 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:35.546 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:35.546 -03:00 [INF] HTTP GET /payments-summary => 200 in 0ms
+2025-07-28 01:17:35.546 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 0.6782ms
+2025-07-28 01:17:36.073 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:17:36.073 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:36.073 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:36.073 -03:00 [INF] HTTP GET /payments-summary => 200 in 0ms
+2025-07-28 01:17:36.073 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 0.6835ms
+2025-07-28 01:17:36.613 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:17:36.613 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:36.613 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:36.613 -03:00 [INF] HTTP GET /payments-summary => 200 in 0ms
+2025-07-28 01:17:36.613 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 0.7462ms
+2025-07-28 01:17:37.032 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:17:37.032 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:37.032 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:37.032 -03:00 [INF] HTTP GET /payments-summary => 200 in 0ms
+2025-07-28 01:17:37.032 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 0.5636ms
+2025-07-28 01:17:37.588 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:17:37.588 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:37.589 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:17:37.589 -03:00 [INF] HTTP GET /payments-summary => 200 in 0ms
+2025-07-28 01:17:37.589 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 0.6263ms
+2025-07-28 01:17:38.847 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:38.847 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:38.847 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:38.847 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:17:38.847 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.4095ms
+2025-07-28 01:17:39.374 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:39.375 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:39.375 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:39.375 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:17:39.375 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.545ms
+2025-07-28 01:17:44.927 -03:00 [INF] Now listening on: http://localhost:5292
+2025-07-28 01:17:44.957 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-28 01:17:45.146 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-28 01:17:45.146 -03:00 [INF] Hosting environment: Development
+2025-07-28 01:17:45.146 -03:00 [INF] Content root path: C:\Users\Oscar\source\repos\RinhaDeBackendInMemory\RinhaDeBackendInMemory.API
+2025-07-28 01:17:45.497 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/index.html - null null
+2025-07-28 01:17:45.699 -03:00 [INF] HTTP GET /swagger/index.html => 200 in 79ms
+2025-07-28 01:17:45.703 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/index.html - 200 null text/html;charset=utf-8 213.3767ms
+2025-07-28 01:17:45.823 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_vs/browserLink - null null
+2025-07-28 01:17:45.823 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-28 01:17:45.825 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - 200 16537 application/javascript; charset=utf-8 3.1249ms
+2025-07-28 01:17:45.848 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.9988ms
+2025-07-28 01:17:45.878 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - null null
+2025-07-28 01:17:45.884 -03:00 [INF] HTTP GET /swagger/v1/swagger.json => 200 in 5ms
+2025-07-28 01:17:45.884 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.5017ms
+2025-07-28 01:17:50.442 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 140
+2025-07-28 01:17:50.444 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-07-28 01:17:50.452 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:17:50.470 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:17:50.471 -03:00 [INF] HTTP POST /payments => 200 in 27ms
+2025-07-28 01:17:50.471 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 28.5304ms
+2025-07-28 01:17:55.516 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:17:55.517 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:55.517 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:17:55.517 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:17:55.517 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.9264ms
+2025-07-28 01:18:03.297 -03:00 [INF] Now listening on: http://localhost:5292
+2025-07-28 01:18:03.336 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-28 01:18:03.532 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-28 01:18:03.538 -03:00 [INF] Hosting environment: Development
+2025-07-28 01:18:03.538 -03:00 [INF] Content root path: C:\Users\Oscar\source\repos\RinhaDeBackendInMemory\RinhaDeBackendInMemory.API
+2025-07-28 01:18:03.880 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/index.html - null null
+2025-07-28 01:18:04.040 -03:00 [INF] HTTP GET /swagger/index.html => 200 in 61ms
+2025-07-28 01:18:04.043 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/index.html - 200 null text/html;charset=utf-8 169.5643ms
+2025-07-28 01:18:04.143 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-28 01:18:04.143 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_vs/browserLink - null null
+2025-07-28 01:18:04.145 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - 200 16537 application/javascript; charset=utf-8 2.7254ms
+2025-07-28 01:18:04.169 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.7639ms
+2025-07-28 01:18:04.197 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - null null
+2025-07-28 01:18:04.203 -03:00 [INF] HTTP GET /swagger/v1/swagger.json => 200 in 5ms
+2025-07-28 01:18:04.203 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.5488ms
+2025-07-28 01:18:07.706 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:18:07.708 -03:00 [WRN] Failed to determine the https port for redirect.
+2025-07-28 01:18:07.715 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:18:07.716 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:18:07.716 -03:00 [INF] HTTP GET /alive => 200 in 9ms
+2025-07-28 01:18:07.716 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 9.7985ms
+2025-07-28 01:18:08.420 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:18:08.420 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:18:08.420 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:18:08.420 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:18:08.420 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.6424ms
+2025-07-28 01:18:08.918 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/alive - null null
+2025-07-28 01:18:08.918 -03:00 [INF] Executing endpoint 'HTTP: GET /alive'
+2025-07-28 01:18:08.918 -03:00 [INF] Executed endpoint 'HTTP: GET /alive'
+2025-07-28 01:18:08.918 -03:00 [INF] HTTP GET /alive => 200 in 0ms
+2025-07-28 01:18:08.918 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/alive - 200 null text/plain; charset=utf-8 0.6695ms
+2025-07-28 01:18:10.029 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 141
+2025-07-28 01:18:10.030 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:10.047 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:10.047 -03:00 [INF] HTTP POST /payments => 200 in 17ms
+2025-07-28 01:18:10.047 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 17.7282ms
+2025-07-28 01:18:10.742 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 139
+2025-07-28 01:18:10.742 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:10.743 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:10.743 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:10.743 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 1.0459ms
+2025-07-28 01:18:11.239 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 140
+2025-07-28 01:18:11.239 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:11.239 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:11.239 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:11.240 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.7527ms
+2025-07-28 01:18:11.764 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 141
+2025-07-28 01:18:11.764 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:11.764 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:11.764 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:11.764 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.6638ms
+2025-07-28 01:18:12.280 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 140
+2025-07-28 01:18:12.280 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:12.280 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:12.280 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:12.280 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.6228ms
+2025-07-28 01:18:12.794 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 139
+2025-07-28 01:18:12.794 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:12.795 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:12.795 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:12.795 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.609ms
+2025-07-28 01:18:13.272 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 141
+2025-07-28 01:18:13.273 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:13.273 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:13.273 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:13.273 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.6489ms
+2025-07-28 01:18:13.767 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 141
+2025-07-28 01:18:13.768 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:13.768 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:13.768 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:13.768 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.7858ms
+2025-07-28 01:18:14.215 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 141
+2025-07-28 01:18:14.215 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:14.215 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:14.215 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:14.216 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.4893ms
+2025-07-28 01:18:14.652 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5292/payments - application/json 140
+2025-07-28 01:18:14.652 -03:00 [INF] Executing endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:14.652 -03:00 [INF] Executed endpoint 'HTTP: POST /payments'
+2025-07-28 01:18:14.652 -03:00 [INF] HTTP POST /payments => 200 in 0ms
+2025-07-28 01:18:14.653 -03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5292/payments - 200 0 null 0.5572ms
+2025-07-28 01:18:17.494 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/payments-summary - null null
+2025-07-28 01:18:17.494 -03:00 [INF] Executing endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:18:17.497 -03:00 [INF] Executed endpoint 'HTTP: GET payments-summary'
+2025-07-28 01:18:17.497 -03:00 [INF] HTTP GET /payments-summary => 200 in 3ms
+2025-07-28 01:18:17.497 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/payments-summary - 200 null application/json; charset=utf-8 3.6825ms
