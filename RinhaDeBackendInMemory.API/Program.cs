@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<PaymentService>();
 builder.Services.AddHostedService<PaymentRetryBackgroundService>();
+builder.Services.AddSingleton(UnixSocketHttpClient.Create("/tmp/processed_payments.sock"));
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs.txt", rollingInterval: RollingInterval.Day)
@@ -33,9 +34,22 @@ app.UseHttpsRedirection();
 
 app.MapGet("/alive", () => "Yes");
 
+app.MapGet("/hello", async (PaymentService service) =>
+{
+    return await service.TestUnixClient();
+});
+
 app.MapPost("/payments", (PaymentRequest payment, PaymentService service) =>
 {
-    Task.Run(() => service.HandleProccessPayment(payment));
+    try
+    {
+        Task.Run(() => service.HandleProccessPayment(payment));
+
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine(ex.ToString());
+    }
 })
 .WithName("ProcessPayment");
 

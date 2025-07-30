@@ -8,17 +8,20 @@ namespace RinhaDeBackendInMemory.API
     public class PaymentService
     {
         public HttpClient Client { get; }
+        public UnixSocketHttpClient UnixClient { get; set; }
         private static readonly HttpClientHandler Handler = new HttpClientHandler();
         private readonly IConfiguration Config;
         private readonly ConcurrentBag<Payment> Payments = new();
         private readonly ConcurrentDictionary<Guid, Payment> Unprocessed = new();
 
-        public PaymentService(IConfiguration configuration)
+        public PaymentService(IConfiguration configuration, UnixSocketHttpClient unixClient)
         {
             Client = new HttpClient(Handler)
             {
                 Timeout = TimeSpan.FromMilliseconds(500) 
             };
+
+            UnixClient = unixClient;
             Client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             Config = configuration;
         }
@@ -123,5 +126,9 @@ namespace RinhaDeBackendInMemory.API
             }
         }
 
+        public async Task<string> TestUnixClient()
+        {
+            return await UnixClient.GetAsync("/hello").Result.Content.ReadAsStringAsync();
+        }
     }
 }

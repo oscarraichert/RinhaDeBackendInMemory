@@ -1,0 +1,51 @@
+2025-07-29 18:52:30.174 -03:00 [INF] Now listening on: http://localhost:5292
+2025-07-29 18:52:30.211 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-29 18:52:30.367 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-29 18:52:30.367 -03:00 [INF] Hosting environment: Development
+2025-07-29 18:52:30.367 -03:00 [INF] Content root path: C:\Users\Oscar\source\repos\RinhaDeBackendInMemory\RinhaDeBackendInMemory.API
+2025-07-29 18:52:30.919 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/index.html - null null
+2025-07-29 18:52:31.136 -03:00 [INF] HTTP GET /swagger/index.html => 200 in "00:00:00.0666586"
+2025-07-29 18:52:31.138 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/index.html - 200 null text/html;charset=utf-8 226.9543ms
+2025-07-29 18:52:31.309 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-29 18:52:31.309 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/_vs/browserLink - null null
+2025-07-29 18:52:31.312 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_framework/aspnetcore-browser-refresh.js - 200 16537 application/javascript; charset=utf-8 3.9246ms
+2025-07-29 18:52:31.349 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.0123ms
+2025-07-29 18:52:31.393 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - null null
+2025-07-29 18:52:31.400 -03:00 [INF] HTTP GET /swagger/v1/swagger.json => 200 in "00:00:00.0055411"
+2025-07-29 18:52:31.400 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5292/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.6271ms
+2025-07-29 18:57:11.170 -03:00 [INF] Now listening on: https://localhost:7076
+2025-07-29 18:57:11.200 -03:00 [INF] Now listening on: http://localhost:5292
+2025-07-29 18:57:11.203 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-29 18:57:11.204 -03:00 [INF] Hosting environment: Development
+2025-07-29 18:57:11.204 -03:00 [INF] Content root path: /mnt/c/Users/Oscar/source/repos/RinhaDeBackendInMemory/RinhaDeBackendInMemory.API
+2025-07-29 18:59:24.302 -03:00 [INF] Now listening on: https://localhost:7076
+2025-07-29 18:59:24.331 -03:00 [INF] Now listening on: http://localhost:5292
+2025-07-29 18:59:24.333 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-29 18:59:24.334 -03:00 [INF] Hosting environment: Development
+2025-07-29 18:59:24.334 -03:00 [INF] Content root path: /mnt/c/Users/Oscar/source/repos/RinhaDeBackendInMemory/RinhaDeBackendInMemory.API
+2025-07-29 18:59:25.176 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger - null null
+2025-07-29 18:59:25.332 -03:00 [INF] HTTP GET /swagger => 301 in "00:00:00.0165359"
+2025-07-29 18:59:25.336 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger - 301 0 null 161.7773ms
+2025-07-29 18:59:25.344 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/index.html - null null
+2025-07-29 18:59:25.416 -03:00 [INF] HTTP GET /swagger/index.html => 200 in "00:00:00.0714317"
+2025-07-29 18:59:25.418 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/index.html - 200 null text/html;charset=utf-8 74.0618ms
+2025-07-29 18:59:25.437 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/swagger-ui.css - null null
+2025-07-29 18:59:25.438 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/swagger-ui-bundle.js - null null
+2025-07-29 18:59:25.441 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/swagger-ui-standalone-preset.js - null null
+2025-07-29 18:59:25.557 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-07-29 18:59:25.557 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-07-29 18:59:25.557 -03:00 [INF] HTTP GET /swagger/swagger-ui.css => 200 in "00:00:00.1190834"
+2025-07-29 18:59:25.558 -03:00 [INF] HTTP GET /swagger/swagger-ui-standalone-preset.js => 200 in "00:00:00.1161777"
+2025-07-29 18:59:25.558 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/swagger-ui.css - 200 152034 text/css 120.8963ms
+2025-07-29 18:59:25.558 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/swagger-ui-standalone-preset.js - 200 230280 text/javascript 117.6345ms
+2025-07-29 18:59:25.608 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-07-29 18:59:25.608 -03:00 [INF] HTTP GET /swagger/swagger-ui-bundle.js => 200 in "00:00:00.1689881"
+2025-07-29 18:59:25.608 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/swagger-ui-bundle.js - 200 1456926 text/javascript 170.0066ms
+2025-07-29 18:59:25.700 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - null null
+2025-07-29 18:59:25.709 -03:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-07-29 18:59:25.714 -03:00 [INF] Request starting HTTP/2 GET https://localhost:7076/swagger/favicon-32x32.png - null null
+2025-07-29 18:59:25.715 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-07-29 18:59:25.716 -03:00 [INF] HTTP GET /swagger/favicon-32x32.png => 200 in "00:00:00.0006611"
+2025-07-29 18:59:25.716 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/favicon-32x32.png - 200 628 image/png 1.7397ms
+2025-07-29 18:59:25.865 -03:00 [INF] HTTP GET /swagger/v1/swagger.json => 200 in "00:00:00.1645480"
+2025-07-29 18:59:25.866 -03:00 [INF] Request finished HTTP/2 GET https://localhost:7076/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 165.7376ms
