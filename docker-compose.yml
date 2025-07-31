@@ -17,8 +17,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.6"
-          memory: "125MB"
+          cpus: "0.4"
+          memory: "100MB"
           
   rinhadebackend-api-2:
     <<: *api
@@ -32,6 +32,11 @@ services:
       - unix-sockets:/tmp
     networks:
       - backend
+    deploy:
+      resources:
+        limits:
+          cpus: "0.4"
+          memory: "50MB"
       
   nginx:
     image: nginx:1.27.0-alpine
