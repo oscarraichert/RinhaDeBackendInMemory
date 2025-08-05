@@ -24,7 +24,7 @@ app.MapGet("/payments-summary", (ProcessedPaymentsService service, DateTime? fro
 
 app.MapPost("/add-payment", (ProcessedPaymentsService service, Payment payment) => 
 {
-    service.AddToPayments(payment);
+    Task.Run(() => service.AddToPayments(payment));
 });
 
 app.Run();

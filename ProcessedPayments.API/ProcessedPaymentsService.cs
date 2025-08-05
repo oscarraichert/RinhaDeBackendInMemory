@@ -10,7 +10,7 @@ namespace ProcessedPayments.API
 
         public ProcessedPaymentsService()
         {
-            
+
         }
 
         public void AddToPayments(Payment payment)

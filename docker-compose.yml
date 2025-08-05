@@ -4,7 +4,6 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      # Shared volume for Unix socket
       - unix-sockets:/tmp
     environment:
       - PROCESSOR_DEFAULT_URL=http://payment-processor-default:8080
@@ -17,8 +16,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "100MB"
+          cpus: "0.5"
+          memory: "120MB"
           
   rinhadebackend-api-2:
     <<: *api
@@ -28,15 +27,14 @@ services:
       context: .
       dockerfile: ProcessedPayments.API/Dockerfile
     volumes:
-      # Same shared volume - this container creates the socket
       - unix-sockets:/tmp
     networks:
       - backend
     deploy:
       resources:
         limits:
-          cpus: "0.4"
-          memory: "50MB"
+          cpus: "0.3"
+          memory: "75MB"
       
   nginx:
     image: nginx:1.27.0-alpine
@@ -53,8 +51,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.3"
-          memory: "100MB"
+          cpus: "0.2"
+          memory: "35MB"
           
 networks:
   backend:
@@ -62,7 +60,6 @@ networks:
   payment-processor:
     external: true
 
-# Named volume that will be shared between containers
 volumes:
   unix-sockets:
     driver: local
