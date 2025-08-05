@@ -23,6 +23,8 @@ var app = builder.Build();
 
 app.UseMiddleware<RequestLoggingMiddleware>();
 
+ThreadPool.SetMaxThreads(workerThreads: 4, completionPortThreads: 4);
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -39,7 +41,6 @@ app.MapPost("/payments", (PaymentRequest payment, PaymentService service) =>
     try
     {
         Task.Run(() => service.HandleProccessPayment(payment));
-
     }
     catch (Exception ex)
     {

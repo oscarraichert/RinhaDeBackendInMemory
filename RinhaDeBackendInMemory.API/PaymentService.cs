@@ -95,7 +95,7 @@ namespace RinhaDeBackendInMemory.API
 
         public async Task AddToPayments(Payment payment)
         {
-            await UnixClient.PostAsJsonAsync("/payments-summary", payment);
+            await UnixClient.PostAsJsonAsync("/add-payment", payment);
         }
     }
 }

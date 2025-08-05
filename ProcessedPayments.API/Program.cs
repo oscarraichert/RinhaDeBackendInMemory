@@ -15,6 +15,8 @@ builder.WebHost.ConfigureKestrel(options => options.ListenUnixSocket(UnixSocketP
 
 var app = builder.Build();
 
+ThreadPool.SetMaxThreads(workerThreads: 4, completionPortThreads: 4);
+
 app.MapGet("/payments-summary", (ProcessedPaymentsService service, DateTime? from, DateTime? to) =>
 {
     return service.PaymentSummary(from, to);
