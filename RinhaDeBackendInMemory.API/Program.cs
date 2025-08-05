@@ -34,11 +34,6 @@ app.UseHttpsRedirection();
 
 app.MapGet("/alive", () => "Yes");
 
-app.MapGet("/hello", async (PaymentService service) =>
-{
-    return await service.TestUnixClient();
-});
-
 app.MapPost("/payments", (PaymentRequest payment, PaymentService service) =>
 {
     try

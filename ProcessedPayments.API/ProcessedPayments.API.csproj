@@ -17,4 +17,8 @@
     <Folder Include="Properties\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RinhaDeBackendInMemory.API\RinhaDeBackendInMemory.API.csproj" />
+  </ItemGroup>
+
 </Project>

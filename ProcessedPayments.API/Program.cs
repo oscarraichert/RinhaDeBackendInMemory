@@ -1,4 +1,7 @@
+using ProcessedPayments.API;
+
 var builder = WebApplication.CreateBuilder();
+builder.Services.AddSingleton<ProcessedPaymentsService>();
 
 const string UnixSocketPath = "/tmp/processed_payments.sock";
 
@@ -11,6 +14,9 @@ builder.WebHost.ConfigureKestrel(options => options.ListenUnixSocket(UnixSocketP
 
 var app = builder.Build();
 
-app.MapGet("/hello", () => "Hello, Unix Socket");
+app.MapGet("/payments-summary", (ProcessedPaymentsService service, DateTime? from, DateTime? to) =>
+{
+    return service.PaymentSummary(from, to);
+});
 
 app.Run();

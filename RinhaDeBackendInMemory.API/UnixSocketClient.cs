@@ -19,9 +19,9 @@ public class UnixSocketHttpClient : HttpClient
                 return new NetworkStream(socket, ownsSocket: true);
                
             },
-            // Disable pooling to ensure ConnectCallback is always used
+
             PooledConnectionLifetime = TimeSpan.Zero,
-            // Force HTTP/1.1 to avoid HTTP/2 complications
+
             SslOptions = new System.Net.Security.SslClientAuthenticationOptions
             {
                 ApplicationProtocols = new List<System.Net.Security.SslApplicationProtocol>

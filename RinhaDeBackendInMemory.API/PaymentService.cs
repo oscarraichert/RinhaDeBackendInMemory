@@ -2,6 +2,8 @@
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace RinhaDeBackendInMemory.API
 {
@@ -11,7 +13,6 @@ namespace RinhaDeBackendInMemory.API
         public UnixSocketHttpClient UnixClient { get; set; }
         private static readonly HttpClientHandler Handler = new HttpClientHandler();
         private readonly IConfiguration Config;
-        private readonly ConcurrentBag<Payment> Payments = new();
         private readonly ConcurrentDictionary<Guid, Payment> Unprocessed = new();
 
         public PaymentService(IConfiguration configuration, UnixSocketHttpClient unixClient)
@@ -44,7 +45,7 @@ namespace RinhaDeBackendInMemory.API
 
             if (response.IsSuccessStatusCode)
             {
-                Payments.Add(payment);
+                //Payments.Add(payment);
             }
             else
             {
@@ -59,50 +60,13 @@ namespace RinhaDeBackendInMemory.API
             if (response.IsSuccessStatusCode)
             {
                 payment.processedOnFallback = true;
-                Payments.Add(payment);
+                //Payments.Add(payment);
             }
             else
             {
                 Unprocessed[payment.correlationId] = payment;
             }
         }
-
-        public PaymentSummary PaymentSummary(DateTime? from, DateTime? to)
-        {
-            from ??= DateTime.MinValue;
-            to ??= DateTime.MaxValue;
-
-            var payments = Payments.Where(x => x.requestedAt >= from && x.requestedAt <= to).ToList();
-
-            (int Requests, decimal Amount) defaultPayments = (0, 0);
-            (int Requests, decimal Amount) fallbackPayments = (0, 0);
-
-            payments.ForEach(payment =>
-            {
-                _ = payment.processedOnFallback switch
-                {
-                    true => fallbackPayments = (fallbackPayments.Requests + 1, fallbackPayments.Amount + payment.amount),
-                    false => defaultPayments = (defaultPayments.Requests + 1, defaultPayments.Amount + payment.amount),
-                };
-            });
-
-            var defaultProcessor = new ProcessorSummary
-            {
-                TotalRequests = defaultPayments.Requests,
-                TotalAmount = defaultPayments.Amount
-            };
-
-            var fallbackProcessor = new ProcessorSummary
-            {
-                TotalRequests = fallbackPayments.Requests,
-                TotalAmount = fallbackPayments.Amount
-            };
-
-            var summary = new PaymentSummary { Default = defaultProcessor, Fallback = fallbackProcessor };
-
-            return summary;
-        }
-
 
         public async Task RetryUnprocessedLoopAsync(CancellationToken cancellationToken)
         {
@@ -129,6 +93,13 @@ namespace RinhaDeBackendInMemory.API
         public async Task<string> TestUnixClient()
         {
             return await UnixClient.GetAsync("/hello").Result.Content.ReadAsStringAsync();
+        }
+
+        public async Task<PaymentSummary> PaymentSummary(DateTime? from, DateTime? to)
+        {
+            var result = await UnixClient.GetAsync("/payments-summary").Result.Content.ReadFromJsonAsync<PaymentSummary>();
+
+            return result!;
         }
     }
 }
