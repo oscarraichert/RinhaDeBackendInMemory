@@ -1,9 +1,5 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using System.Collections.Concurrent;
-using System.Net;
+﻿using System.Collections.Concurrent;
 using System.Net.Http.Headers;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace RinhaDeBackendInMemory.API
 {
@@ -45,7 +41,7 @@ namespace RinhaDeBackendInMemory.API
 
             if (response.IsSuccessStatusCode)
             {
-                //Payments.Add(payment);
+                await AddToPayments(payment);
             }
             else
             {
@@ -60,7 +56,7 @@ namespace RinhaDeBackendInMemory.API
             if (response.IsSuccessStatusCode)
             {
                 payment.processedOnFallback = true;
-                //Payments.Add(payment);
+                await AddToPayments(payment);
             }
             else
             {
@@ -90,16 +86,16 @@ namespace RinhaDeBackendInMemory.API
             }
         }
 
-        public async Task<string> TestUnixClient()
-        {
-            return await UnixClient.GetAsync("/hello").Result.Content.ReadAsStringAsync();
-        }
-
         public async Task<PaymentSummary> PaymentSummary(DateTime? from, DateTime? to)
         {
             var result = await UnixClient.GetAsync("/payments-summary").Result.Content.ReadFromJsonAsync<PaymentSummary>();
 
             return result!;
+        }
+
+        public async Task AddToPayments(Payment payment)
+        {
+            await UnixClient.PostAsJsonAsync("/payments-summary", payment);
         }
     }
 }

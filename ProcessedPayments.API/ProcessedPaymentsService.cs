@@ -13,6 +13,11 @@ namespace ProcessedPayments.API
             
         }
 
+        public void AddToPayments(Payment payment)
+        {
+            Payments.Add(payment);
+        }
+
         public PaymentSummary PaymentSummary(DateTime? from, DateTime? to)
         {
             from ??= DateTime.MinValue;
